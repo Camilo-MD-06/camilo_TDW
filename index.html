@@ -1,140 +1,248 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valle Grande - Centro de Educación Superior</title>
-  <style>
-    * {margin:0;padding:0;box-sizing:border-box}
-    body {font-family:'Segoe UI',sans-serif;line-height:1.6;background:linear-gradient(135deg,#f5f7fa,#c3cfe2);color:#333;min-height:100vh}
-    .container {max-width:1200px;margin:auto;padding:0 20px}
-    header {background:linear-gradient(135deg,#2E5077,#4DA1A9);color:#fff;padding:20px 0;box-shadow:0 4px 20px rgba(0,0,0,0.1)}
-    .header-content {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .logo-section {display:flex;align-items:center;gap:20px}
-    .logo {height:80px;width:80px;border-radius:50%;box-shadow:0 4px 15px rgba(255,255,255,0.2)}
-    .header-text h1 {font-size:2.2rem;font-weight:700}
-    nav {background:#2E5077;padding:10px 0;position:sticky;top:0;z-index:100}
-    .nav-links {display:flex;justify-content:center;gap:30px;list-style:none;flex-wrap:wrap}
-    .nav-links a {color:#fff;text-decoration:none;font-weight:500;padding:8px 16px;border-radius:20px;transition:0.3s}
-    .nav-links a:hover {background:rgba(121,215,190,0.2)}
-    main {padding:30px 0}
-    .section {background:#fff;margin:20px 0;padding:30px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
-    .section h2 {color:#2E5077;font-size:1.8rem;margin-bottom:20px}
-    .section h3 {color:#4DA1A9;font-size:1.3rem;margin:20px 0 10px}
-    .section p {margin-bottom:15px;text-align:justify}
-    .timeline {border-left:3px solid #4DA1A9;padding-left:20px}
-    .timeline-item {margin:20px 0;position:relative;padding-left:20px}
-    .timeline-year {font-weight:bold;color:#2E5077}
-    .mission-vision {display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .card {background:linear-gradient(135deg,#79D7BE,#4DA1A9);color:#fff;padding:20px;border-radius:15px;text-align:center}
-    .card h3 {margin-bottom:15px}
-    .youtube-section {text-align:center;background:linear-gradient(135deg,#ff6b6b,#ee5a24);color:#fff;padding:30px;border-radius:15px;margin-top:30px}
-    .youtube-btn {background:#fff;color:#ee5a24;padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:bold;display:inline-flex;align-items:center;gap:10px;margin-top:15px}
-    .footer {background:linear-gradient(135deg,#2E5077,#1a365d);color:#fff;padding:30px 0;margin-top:40px}
-    .footer-content {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:center}
-    .footer h3 {color:#79D7BE;margin-bottom:10px}
-    .footer p,.footer a {color:#e2e8f0;text-decoration:none;margin-bottom:8px;display:block}
-    .footer a:hover {color:#79D7BE}
-    .social-links {display:flex;justify-content:center;gap:10px;margin-top:10px}
-    .social-links img {width:24px;height:24px;filter:brightness(0) invert(1)}
-    .footer-bottom {text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);color:#a0aec0}
-    @media(max-width:768px){.header-content,.nav-links,.mission-vision,.footer-content{flex-direction:column;text-align:center;gap:10px}}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container header-content">
-      <div class="logo-section">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxRhwY0Bi01bhMGHuYcJxd2DciYX5XbezJ_w&s" alt="Logo" class="logo">
-        <div class="header-text">
-          <h1>Valle Grande</h1>
-          <p>Centro de Educación Superior</p>
-        </div>
+<html>
+  <head>
+    <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --primary: #f7941d;
+        --dark: #003366;
+        --light: #f9f9f9;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--light);
+        color: #333;
+      }
+
+      header {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        border-bottom: 3px solid var(--primary);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo img {
+        width: 50px;
+      }
+
+      .logo strong {
+        font-size: 1.5em;
+        color: var(--dark);
+      }
+
+      nav {
+        display: flex;
+        gap: 10px;
+      }
+
+      nav button {
+        background-color: var(--primary);
+        color: #fff;
+        border: none;
+        padding: 8px 18px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      nav button:hover {
+        background-color: #e67e00;
+      }
+
+      .content {
+        padding: 30px 20px;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2em;
+        color: var(--dark);
+        margin-bottom: 20px;
+      }
+
+      .main-image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+
+      .section {
+        margin-bottom: 40px;
+        background-color: #fff;
+        padding: 20px;
+        border-left: 6px solid var(--primary);
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .section h2 {
+        margin-top: 0;
+        color: var(--primary);
+      }
+
+      .btn {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .btn:hover {
+        background-color: #e67e00;
+      }
+
+      footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 30px 20px;
+        font-size: 14px;
+        margin-top: 40px;
+      }
+
+      footer p {
+        margin: 8px 0;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        nav {
+          margin-top: 10px;
+          flex-wrap: wrap;
+        }
+
+        .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxRhwY0Bi01bhMGHuYcJxd2DciYX5XbezJ_w&s" alt="Logo">
+        <strong>VALLE GRANDE</strong>
+      </div>
+      <nav>
+        <button onclick="window.open('https://vallegrande.edu.pe/nosotros/', '_blank')">Nosotros</button>
+        <button onclick="window.open('https://vallegrande.edu.pe/nosotros/', '_blank')">Historia</button>
+        <button onclick="window.open('https://www.youtube.com/watch?v=zwdonPY4PS0', '_blank')">Video</button>
+      </nav>
+    </header>
+
+    <div class="content">
+      <h1>Bienvenidos a Valle Grande</h1>
+      <img class="main-image" src="https://media.licdn.com/dms/image/v2/D4E3DAQESsUN8tBMgOw/image-scale_191_1128/image-scale_191_1128/0/1679087192008/tecnologiavg_cover?e=2147483647&v=beta&t=8fqJ_xT8YD4PGUtEGjRoOiBlYhR_TBxdKZxLgsjmT_4" alt="Institución">
+
+      <div class="section" id="nosotros">
+        <h2>¿Quiénes somos?</h2>
+        <p>Valle Grande es actualmente un Centro de Educación Superior constituido por la Promotora de Obras Sociales y de Instrucción Popular (PROSIP) el 25 de febrero de 1965, reconocido por el Ministerio de Agricultura mediante Resolución Directoral N° 04833-AG-DGAG del 2 de junio de 1983 y por el Ministerio de Educación mediante Resolución Ministerial N°0751-92-ED.</p>
+      </div>
+
+      <div class="section" id="historia">
+        <h2>Desarrollo histórico</h2>
+        <p>Han transcurrido casi 50 años de trabajo y continuamos con el mismo deseo, seguir contribuyendo con el bienestar de las familias de Cañete y Yauyos.</p>
+        <button onclick="window.open('https://vallegrande.edu.pe/', '_blank')">LEER MÁS</button>
+      </div>
+
+      <div class="section">
+        <h2>Misión y Visión</h2>
+        <p><strong>Misión:</strong> Formar personas en el ámbito técnico profesional, considerando el sentido trascendente del hombre, desarrollando en ellos competencias que faciliten su inserción laboral, contribuyendo al desarrollo del país.</p>
+        <p><strong>Visión:</strong> Ser una institución referente de excelencia de la educación técnica profesional del Perú, asociada al sector productivo.</p>
+      </div>
+
+      <div class="section" id="organigrama">
+        <h2>Organigrama</h2>
+        <p><a href="https://www.youtube.com/@vallegrande_" target="_blank">Visita nuestro canal de YouTube</a></p>
+        <div style="
+          position: relative;
+          width: 100%;
+          max-height: 300px;
+          border-radius: 10px;
+          overflow: hidden;
+          background: url('https://vallegrande.edu.pe/media/original_images/IMG1.jpg') no-repeat center center;
+          background-size: cover;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        ">
+          <img src="https://media2.giphy.com/media/AkSCTddF0CZ7ERYLG7/source.gif"
+              alt="Organigrama"
+              style="max-height: 100%; max-width: 100%; object-fit: contain; z-index: 1;">
       </div>
     </div>
-  </header>
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#quienes-somos">Quiénes Somos</a></li>
-      <li><a href="#historia">Historia</a></li>
-      <li><a href="#mision-vision">Misión y Visión</a></li>
-      <li><a href="#organigrama">Organigrama</a></li>
-      <li><a href="#youtube">YouTube</a></li>
-    </ul>
-  </nav>
-  <main class="container">
-    <section id="quienes-somos" class="section">
-      <h2>¿Quiénes Somos?</h2>
-      <p>Valle Grande es actualmente un Centro de Educación Superior constituido por PROSIP desde 1965, reconocido por el Ministerio de Agricultura en 1983 y por el Ministerio de Educación en 1992.</p>
-      <p>Comprometida con la formación de profesionales técnicos para el desarrollo de Cañete, Yauyos y el país, con casi 60 años de experiencia.</p>
-    </section>
-    <section id="historia" class="section">
-      <h2>Desarrollo Histórico</h2>
-      <p>Casi 60 años de trabajo continuo al servicio de las familias de Cañete y Yauyos.</p>
-      <div class="timeline">
-        <div class="timeline-item"><div class="timeline-year">1965</div><p><strong>Fundación:</strong> PROSIP constituye Valle Grande.</p></div>
-        <div class="timeline-item"><div class="timeline-year">1983</div><p><strong>Reconocimiento:</strong> Ministerio de Agricultura oficializa a Valle Grande.</p></div>
-        <div class="timeline-item"><div class="timeline-year">1992</div><p><strong>Acreditación:</strong> Ministerio de Educación lo reconoce oficialmente.</p></div>
-        <div class="timeline-item"><div class="timeline-year">2000-2010</div><p><strong>Modernización:</strong> Expansión tecnológica y académica.</p></div>
-        <div class="timeline-item"><div class="timeline-year">2010-2020</div><p><strong>Consolidación:</strong> Alianzas y empleabilidad fortalecida.</p></div>
-        <div class="timeline-item"><div class="timeline-year">2020-Actualidad</div><p><strong>Digitalización:</strong> Educación híbrida y virtual.</p></div>
-      </div>
-    </section>
-    <section id="mision-vision" class="section">
-      <h2>Misión y Visión</h2>
-      <div class="mission-vision">
-        <div class="card">
-          <h3>Misión</h3>
-          <p>Formar técnicos competentes con sentido trascendente, facilitando su inserción laboral y el desarrollo del país.</p>
+
+    <footer>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; max-width: 1000px; margin: auto;">
+        <div style="flex: 1; min-width: 220px;">
+          <h3 style="margin-bottom: 10px;">Contacto</h3>
+          <p>📍 Ant. Panamericana Sur Km. 144</p>
+          <p>San Vicente de Cañete, Lima, Perú</p>
+          <p>Apartado Postal 70</p>
         </div>
-        <div class="card">
-          <h3>Visión</h3>
-          <p>Ser referente de excelencia en educación técnico-profesional vinculada al sector productivo.</p>
+        <div style="flex: 1; min-width: 220px;">
+          <h3 style="margin-bottom: 10px;">Información</h3>
+          <p>🏢 RUC: 20120209905</p>
+          <p>Razón Social: I.E.S.T.P. Valle Grande</p>
+        </div>
+        <div style="flex: 1; min-width: 220px;">
+          <h3 style="margin-bottom: 10px;">Contáctanos</h3>
+          <p>📞 (01) 581-2261</p>
+          <p>✉ <a href="mailto:informes@vallegrande.edu.pe">informes@vallegrande.edu.pe</a></p>
+          <p>🌐 <a href="https://www.vallegrande.edu.pe" target="_blank">www.vallegrande.edu.pe</a></p>
         </div>
       </div>
-    </section>
-    <section id="organigrama" class="section">
-      <h2>Organigrama</h2>
-      <p>Estructura diseñada para una gestión eficiente y educación de calidad, con niveles jerárquicos claros.</p>
-    </section>
-    <div class="youtube-section" id="youtube">
-      <h2>🎥 Visita Nuestro Canal de YouTube</h2>
-      <p>Descubre más sobre nuestros programas y contenido educativo.</p>
-      <a href="https://www.youtube.com/@vallegrande_" target="_blank" class="youtube-btn">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-        Ver Canal
-      </a>
-    </div>
-  </main>
-  <footer class="footer">
-    <div class="container footer-content">
-      <div>
-        <h3>Información</h3>
-        <p><strong>RUC:</strong> 20120099095</p>
-        <p><strong>Razón Social:</strong> Valle Grande</p>
-        <p><strong>Tipo:</strong> Centro Superior</p>
+      <div style="text-align: center; margin-top: 30px; border-top: 1px solid #ccc; padding-top: 15px; font-size: 13px;">
+        © 2025 I.E.S.T.P. Valle Grande — Todos los derechos reservados.
       </div>
-      <div>
-        <h3>Ubicación</h3>
-        <p>San Vicente de Cañete</p>
-        <p>Lima, Perú</p>
-        <p>Apartado Postal 70</p>
-      </div>
-      <div>
-        <h3>Contacto</h3>
-        <a href="mailto:informe@vallegrande.edu.pe">informe@vallegrande.edu.pe</a>
-        <a href="https://www.vallegrande.edu.pe" target="_blank">vallegrande.edu.pe</a>
-        <div class="social-links">
-          <a href="https://linkedin.com/school/vallegrande" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"></a>
-          <a href="https://www.youtube.com/@vallegrande_" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"></a>
-          <a href="mailto:informes@vallegrande.edu.pe"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Valle Grande - Todos los derechos reservados.</p>
-      <p>Casi 60 años formando profesionales de excelencia</p>
-    </div>
-  </footer>
-</body>
+    </footer>
+
+    <script>
+      function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      }
+    </script>
+  </body>
 </html>
