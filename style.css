@@ -1,0 +1,185 @@
+      :root {
+        --primary: #f7941d;
+        --dark: #003366;
+        --light: #f9f9f9;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--light);
+        color: #333;
+      }
+
+      header {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        border-bottom: 3px solid var(--primary);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo img {
+        width: 50px;
+      }
+
+      .logo strong {
+        font-size: 1.5em;
+        color: var(--dark);
+      }
+
+      nav {
+        display: flex;
+        gap: 10px;
+      }
+
+      nav button {
+        background-color: var(--primary);
+        color: #fff;
+        border: none;
+        padding: 8px 18px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      nav button:hover {
+        background-color: #e67e00;
+      }
+
+      .content {
+        padding: 30px 20px;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2em;
+        color: var(--dark);
+        margin-bottom: 20px;
+      }
+
+      .main-image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+
+      .section {
+        margin-bottom: 40px;
+        background-color: #fff;
+        padding: 20px;
+        border-left: 6px solid var(--primary);
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .section h2 {
+        margin-top: 0;
+        color: var(--primary);
+      }
+
+      .btn {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .btn:hover {
+        background-color: #e67e00;
+      }
+
+      footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 30px 20px;
+        font-size: 14px;
+        margin-top: 40px;
+      }
+
+      footer p {
+        margin: 8px 0;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+        .footer-columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        max-width: 1000px;
+        margin: auto;
+        }
+
+        .organigrama-fondo {
+        position: relative;
+        width: 100%;
+        max-height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: url('https://vallegrande.edu.pe/media/original_images/IMG1.jpg') no-repeat center center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        nav {
+          margin-top: 10px;
+          flex-wrap: wrap;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+
+        .organigrama-fondo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        z-index: 1;
+        }
+
+
+      }
